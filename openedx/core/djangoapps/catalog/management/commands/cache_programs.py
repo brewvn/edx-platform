@@ -276,7 +276,7 @@ class Command(BaseCommand):
         """
         programs_by_type_slug = defaultdict(list)
         for program in programs.values():
-            program_slug = normalize_program_type(program.get('type_attrs', {}).get('slug'))
+            program_slug = program.get('type_attrs', {}).get('slug')
             cache_key = PROGRAMS_BY_TYPE_SLUG_CACHE_KEY_TPL.format(site_id=site.id, program_slug=program_slug)
             programs_by_type_slug[cache_key].append(program['uuid'])
         return programs_by_type_slug
