@@ -855,7 +855,7 @@ class TestGetProgramsByType(CacheIsolationTestCase):
             type_attrs=ProgramTypeAttrsFactory.create(slug="masters")
         )
         cls.bachelors_program = ProgramFactory.create(
-            type='Bachelors'
+            type='Bachelors',
             type_attrs=ProgramTypeAttrsFactory.create(slug="bachelors")
         )
         cls.no_type_program = ProgramFactory.create(
