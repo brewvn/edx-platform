@@ -177,7 +177,7 @@ def get_programs_by_type_slug(site, program_type_slug):
     can be translated.
     """
     program_type_slug_cache_key = PROGRAMS_BY_TYPE_SLUG_CACHE_KEY_TPL.format(
-        site_id=site.id, program_slug=normalize_program_type(program_type_slug)
+        site_id=site.id, program_slug=program_type_slug
     )
     uuids = cache.get(program_type_slug_cache_key, [])
     if not uuids:

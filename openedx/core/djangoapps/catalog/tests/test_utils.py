@@ -904,6 +904,7 @@ class TestGetProgramsByType(CacheIsolationTestCase):
             programs_by_type_slug[program_type_slug_cache_key].append(program['uuid'])
 
         cache.set_many(programs_by_type, None)
+        cache.set_many(programs_by_type_slug, None)
 
     def test_get_masters_programs(self):
         expected_programs = [self.masters_program_1, self.masters_program_2]
