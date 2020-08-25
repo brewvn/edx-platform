@@ -901,6 +901,7 @@ class ProgramMarketingDataExtender(ProgramDataExtender):
                 if instructor.get('name', '').strip() not in curr_instructors_names:
                     self.instructors.append(instructor)
 
+
 def is_user_enrolled_in_program_type(user, program_type_slug, paid_modes=False, enrollments=None, entitlements=None):
     """
     This method will look at the learners Enrollments and Entitlements to determine

@@ -4,6 +4,7 @@ Python APIs exposed by the Programs app to other in-process apps.
 
 from .utils import is_user_enrolled_in_program_type as _is_user_enrolled_in_program_type
 
+
 def is_user_enrolled_in_program_type(user, program_type_slug, paid_modes=False, enrollments=None, entitlements=None):
     """
     This method will look at the learners Enrollments and Entitlements to determine
