@@ -17,6 +17,7 @@ from django.test import TransactionTestCase
 from django.test.client import RequestFactory
 from django.test.utils import override_settings
 from django.urls import reverse
+from pytest import mark
 from pytz import UTC
 from six.moves import range
 from social_django.models import Partial, UserSocialAuth
@@ -325,6 +326,7 @@ class RegistrationViewValidationErrorTest(ThirdPartyAuthTestMixin, UserAPITestCa
 
 @ddt.ddt
 @skip_unless_lms
+@mark.django_db
 class RegistrationViewTestV1(ThirdPartyAuthTestMixin, UserAPITestCase):
     """Tests for the registration end-points of the User API. """
 
