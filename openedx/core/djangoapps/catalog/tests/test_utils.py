@@ -886,7 +886,7 @@ class TestGetProgramsByType(CacheIsolationTestCase):
         programs_by_type_slug = defaultdict(list)
         for program in all_programs:
             program_type = normalize_program_type(program.get('type'))
-            program_type_slug = program.get('type_attrs', {}).get('slug')
+            program_type_slug = (program.get('type_attrs') or {}).get('slug')
             site_id = self.site.id
 
             if program == self.masters_program_other_site:
